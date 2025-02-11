@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        h1 {
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+        }
+
+        .box {
+            width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .box:hover {
+            box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .outline-box {
+            width: 250px;
+            padding: 15px;
+            margin: 20px auto;
+            background: #ffeb3b;
+            outline: 4px solid red;
+            outline-offset: 5px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            background: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        button:hover {
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Shadows & Outlines</h1>
+
+    <div class="box">This is a box with shadow</div>
+
+    <div class="outline-box">This box has an outline</div>
+
+    <button>Click Me</button>
+
+</body>
+</html>
