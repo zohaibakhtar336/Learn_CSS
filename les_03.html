@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+    <style>
+        /* Font Properties */
+        .font-example {
+            font-family: 'Poppins', 'Arial', sans-serif;
+            font-size: 22px;
+            font-weight: bold;
+            font-style: italic;
+            font-variant: small-caps;
+        }
+
+        /* Text Properties */
+        .text-example {
+            text-align: justify;
+            text-decoration: underline dotted red;
+            text-transform: capitalize;
+            letter-spacing: 2px;
+            word-spacing: 5px;
+            line-height: 1.8;
+            text-indent: 50px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            width: 300px;
+            display: block;
+        }
+
+        /* Color Properties */
+        .color-example {
+            color: #ff5733;
+            background-color: rgba(0, 255, 0, 0.3);
+            opacity: 0.9;
+            text-shadow: 2px 2px 5px black;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(45deg, #ff5733, #33ccff, #ff33cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* Box Shadow Example */
+        .box-shadow-example {
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        /* Hover & Active Effects */
+        .hover-effect {
+            color: black;
+            transition: 0.3s;
+        }
+
+        .hover-effect:hover {
+            color: blue;
+            font-size: 25px;
+            text-shadow: 3px 3px 5px gray;
+        }
+
+        .hover-effect:active {
+            color: red;
+            font-weight: bold;
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #222;
+                color: white;
+            }
+            .box-shadow-example {
+                background-color: #333;
+                color: white;
+            }
+        }
+
+        /* 1. Variable Fonts (Advanced Feature) */
+        .variable-font {
+            font-family: 'Inter', sans-serif;
+            font-variation-settings: 'wght' 600, 'wdth' 75; /* Controls font weight and width */
+        }
+
+        /* 2. System Fonts */
+        .system-font {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        /* 3. Text Stroke */
+        .text-stroke {
+            font-size: 40px;
+            color: white;
+            -webkit-text-stroke: 2px black; /* Adds stroke to text */
+        }
+
+        /* 4. Masking Text Effect */
+        .masked-text {
+            font-size: 40px;
+            font-weight: bold;
+            color: white;
+            background: url('https://source.unsplash.com/600x200/?nature,water') no-repeat;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* 5. Text Shadow Animation */
+        @keyframes glowing {
+            0% { text-shadow: 0 0 5px white; }
+            50% { text-shadow: 0 0 20px cyan; }
+            100% { text-shadow: 0 0 5px white; }
+        }
+
+        .glow-text {
+            font-size: 35px;
+            font-weight: bold;
+            color: cyan;
+            animation: glowing 2s infinite alternate;
+        }
+
+        /* 6. Neon Text Effect */
+        .neon-text {
+            font-size: 40px;
+            font-weight: bold;
+            color: #fff;
+            text-shadow: 0 0 5px cyan, 0 0 10px cyan, 0 0 15px cyan, 0 0 20px blue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1 class="font-example">Font Properties Example</h1>
+
+    <p class="text-example">This paragraph demonstrates different text properties and will be truncated if too long.</p>
+
+    <p class="color-example">This text has different color properties with shadows.</p>
+
+    <h2 class="gradient-text">Gradient Text Effect</h2>
+
+    <div class="box-shadow-example">This box has a shadow effect.</div>
+
+    <p class="hover-effect">Hover over this text to see effects!</p>
+
+    <h2 class="variable-font">Variable Font Example</h2>
+
+    <h2 class="system-font">System Font Example</h2>
+
+    <h2 class="text-stroke">Text Stroke Effect</h2>
+
+    <h2 class="masked-text">Masked Text Effect</h2>
+
+    <h2 class="glow-text">Glowing Text Animation</h2>
+
+    <h2 class="neon-text">Neon Text Effect</h2>
+
+</body>
+</html>
