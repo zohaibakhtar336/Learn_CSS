@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+    
+    <style>
+        /* 🌟 1. Global Styles (Least Specific) */
+        p {
+            color: blue; /* Default color */
+            font-size: 18px;
+        }
+
+        /* 🌟 2. Class Selector (More Specific) */
+        .important-text {
+            color: green;
+        }
+
+        /* 🌟 3. ID Selector (Higher Specificity) */
+        #unique-text {
+            color: red;
+        }
+
+        /* 🌟 4. Inline Styles (Even More Specific) */
+        /* <p style="color: purple;"> -> This will override everything above */
+
+        /* 🌟 5. !important (Highest Priority) */
+        .force-style {
+            color: orange !important;
+        }
+
+        /* 🌟 6. Multiple Selectors (Adding Weight) */
+        div p {
+            color: brown; /* More specific than just `p` */
+        }
+
+        /* 🌟 7. Universal Selector (Least Specific) */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 🌟 8. Attribute Selector */
+        [data-custom] {
+            color: pink;
+        }
+
+        /* 🌟 9. Pseudo-Class Selector */
+        p:hover {
+            color: violet;
+        }
+
+        /* 🌟 10. Pseudo-Element Selector */
+        p::first-letter {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        /* 🌟 11. Grouping Selectors */
+        h1, h2, h3 {
+            color: darkblue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>CSS Specificity & Cascade</h1>
+
+    <p>This is a normal paragraph.</p>
+
+    <p class="important-text">This paragraph has a class.</p>
+
+    <p id="unique-text">This paragraph has an ID.</p>
+
+    <p class="force-style" style="color: purple;">This paragraph has inline styling and !important.</p>
+
+    <div>
+        <p>This paragraph is inside a div.</p>
+    </div>
+
+    <p data-custom="true">This paragraph has an attribute.</p>
+
+</body>
+</html>
