@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        /* Block - Like a house taking full width */
+        .block {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: lightblue;
+            margin-bottom: 10px;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Inline - Like cars on a road */
+        .inline {
+            display: inline;
+            padding: 10px;
+            background-color: lightcoral;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Inline-Block - Like shops in a row */
+        .inline-block {
+            display: inline-block;
+            width: 150px;
+            padding: 10px;
+            background-color: lightgreen;
+            margin: 5px;
+            outline: 2px dashed darkgreen;
+        }
+
+        /* Flexbox - Like people standing in a queue */
+        .flex-container {
+            display: flex;
+            gap: 10px;
+            background-color: lightyellow;
+            padding: 10px;
+            box-shadow: inset 4px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .flex-container div {
+            background-color: lightseagreen;
+            padding: 10px;
+            flex: 1;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        /* Grid - Like a chessboard */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: lightgray;
+            padding: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .grid-container div {
+            background-color: violet;
+            padding: 20px;
+            text-align: center;
+            outline: 3px solid purple;
+        }
+
+        /* None - Like a hidden room */
+        .none {
+            display: none;
+        }
+
+        /* Table - Like a restaurant seating plan */
+        .table {
+            display: table;
+            width: 100%;
+            border-collapse: collapse;
+            background-color: lightsteelblue;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .table-row {
+            display: table-row;
+        }
+
+        .table-cell {
+            display: table-cell;
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+            outline: 1px solid navy;
+        }
+
+        /* Grid Auto Flow - Like automatic parking slots */
+        .grid-auto {
+            display: grid;
+            grid-auto-flow: column;
+            gap: 10px;
+            background-color: peachpuff;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Display Property & Shadows</h1>
+    <div class="block">This is a block element</div>
+    <span class="inline">This is an inline element</span>
+    <span class="inline">Another inline element</span>
+    <br><br>
+    <div class="inline-block">Inline-Block 1</div>
+    <div class="inline-block">Inline-Block 2</div>
+    <br><br>
+    <div class="flex-container">
+        <div>Flex Item 1</div>
+        <div>Flex Item 2</div>
+        <div>Flex Item 3</div>
+    </div>
+    <br>
+    <div class="grid-container">
+        <div>Grid Item 1</div>
+        <div>Grid Item 2</div>
+        <div>Grid Item 3</div>
+    </div>
+    <br>
+    <div class="grid-auto">
+        <div>Auto Grid 1</div>
+        <div>Auto Grid 2</div>
+        <div>Auto Grid 3</div>
+    </div>
+    <br>
+    <div class="table">
+        <div class="table-row">
+            <div class="table-cell">Table Cell 1</div>
+            <div class="table-cell">Table Cell 2</div>
+            <div class="table-cell">Table Cell 3</div>
+        </div>
+    </div>
+    <br>
+    <div class="none">This element is hidden (display: none)</div>
+</body>
+</html>
