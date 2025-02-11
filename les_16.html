@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+    <style>
+        .boxes::before {
+            content: "Harry is good ";
+            color: blue;
+            font-weight: bold;
+        }
+
+        .boxes::after {
+            content: "Please enter your name";
+            color: red;
+            font-weight: bold;
+        }
+
+        ::selection {
+            background-color: black;
+            color: aqua;
+        }
+
+        .box::first-letter {
+            color: peru;
+            font-size: 45px;
+            font-weight: bold;
+        }
+
+        input::placeholder {
+            color: rgb(84, 84, 88);
+            font-style: italic;
+        }
+
+        .box {
+            border: 2px solid black;
+            padding: 15px;
+            margin: 10px;
+            font-size: 18px;
+        }
+
+        .box:nth-child(odd) {
+            background-color: lightblue;
+        }
+
+        .box:nth-last-child(2) {
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxes">
+        <div data-color="primary" class="box">I am first box</div>
+        <div class="box">Hey I am a box</div>
+        <div class="box">Hey I am a box</div>
+        <input type="text" placeholder="Type your name here">
+    </div>
+</body>
+
+</html>
