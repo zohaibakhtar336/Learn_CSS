@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+    <style>
+        div {
+            /* Element Selector */
+            background-color: brown;
+        }
+
+        .red {
+            /* Class Selector */
+            background-color: red;
+        }
+
+        #green {
+            /* ID Selector */
+            background-color: green;
+        }
+
+        div p {
+            /* Child Selector */
+            background-color: blue;
+        }
+
+        * {
+            /* Universsal Selector */
+            margin: 0;
+            padding: 0;
+        }
+
+        a:visited {
+            /* Pseudo-class Selector */
+            color: yellow;
+        }
+
+        a:active {
+            /* Pseudo-class Selector */
+            color: green;
+        }
+
+        a:hover {
+            /* Pseudo-class Selector */
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        I am an element selector
+    </div>
+    <div class="red">
+        I am a class selector
+    </div>
+    <div id="green">
+        I am an ID selector
+    </div>
+    <div>
+        <p>
+            I am a child selector
+        </p>
+    </div>
+
+    <a href="https://www.google.com">Go to google</a>
+
+</body>
+
+</html>
