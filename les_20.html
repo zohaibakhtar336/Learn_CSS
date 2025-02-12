@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS</title>
+    <style>
+        /* 🔹 Grid Container */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-rows: 80px auto 50px;
+            grid-template-areas: 
+                "header header header"
+                "sidebar main main"
+                "footer footer footer";
+            gap: 10px;
+            height: 100vh;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        /* 🔹 Grid Items */
+        .header {
+            grid-area: header;
+            background-color: navy;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: darkgray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: lightblue;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        /* 🔹 Grid Items Inside Main Section */
+        .content-box {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid navy;
+        }
+
+        /* 🔹 Spanning (Column & Row Span) */
+        .content-box:first-child {
+            grid-column: span 2;
+            background-color: coral;
+        }
+
+        .content-box:last-child {
+            grid-row: span 2;
+            background-color: yellowgreen;
+        }
+
+        /* 🔹 Responsive Design */
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-areas: 
+                    "header"
+                    "main"
+                    "sidebar"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: 80px auto auto 50px;
+            }
+
+            .main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="header">Header</div>
+        <div class="sidebar">Sidebar</div>
+        <div class="main">
+            <div class="content-box">Item 1 (Spans 2 Columns)</div>
+            <div class="content-box">Item 2</div>
+            <div class="content-box">Item 3</div>
+            <div class="content-box">Item 4</div>
+            <div class="content-box">Item 5 (Spans 2 Rows)</div>
+        </div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>
